@@ -1,6 +1,6 @@
 # Campus Explorer
 
-This is a full-stack web application developed in an academic setting. 
+This is a RESTful web application developed in an academic setting. The frontend is simple HTML/CSS/JS with a Typescript backend and express for the API endpoints. The intended use of the project is to accept valid datasets on past course offering statistics for specific course(s) and to query on that data. 
 
 
 ## Project commands
