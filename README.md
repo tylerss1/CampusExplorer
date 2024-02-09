@@ -18,6 +18,5 @@ This is a RESTful web application developed in an academic setting. The frontend
 
 <br />
 <br />
-<br />
 
 *You may also view a demo of the project [here](https://youtu.be/YRo8KXj7o60).*
