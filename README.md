@@ -14,3 +14,7 @@ This is a RESTful web application developed in an academic setting. The frontend
 1. `yarn lint` to lint your project code. If it does not lint locally, AutoTest will not run your tests when you submit your code.
 
 1. `yarn pretty` to prettify your project code.
+
+
+
+*You may also view a demo of the project [here](https://youtu.be/YRo8KXj7o60).*
