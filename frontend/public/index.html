@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "style.css">
+    <script src = "frontend.js", defer></script>
+    <title>InsightUBC Application</title>
+    
+</head>
+<body>
+
+    <header>
+        <h1>InsightUBC</h1>
+    </header>
+
+    <main>
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'Add')">Add Dataset</button>
+            <button class="tablinks" onclick="openTab(event, 'Remove')">Remove Dataset</button>
+            <button class="tablinks" onclick="openTab(event, 'Query')">Query Dataset</button>
+            <button class="tablinks" onclick="openTab(event, 'List')">List Datasets</button>
+        </div>
+
+        <div id="Add" class="tabcontent">
+            <form id="addDatasetForm">
+                <label for="idInput">Dataset ID:</label>
+                <input type="text" id="idInput" required>
+        
+                <label for="kindSelect">Dataset Kind:</label>
+                <select id="kindSelect" required>
+                    <option value="sections">Sections</option>
+                    <option value="rooms">Rooms</option>
+                </select>
+        
+                <label for="dataTextarea">Dataset Data (Base64):</label>
+                <textarea id="dataTextarea" rows="4" required></textarea>
+        
+                <button type="button" onclick="addDataset()">Add Dataset</button>
+                <div id="addResult"></div>
+                <div id="addError"></div>
+            </form>
+        </div>
+
+        <div id="Remove" class="tabcontent">
+            <form id="removeDatasetForm">
+                <label for="removeIdInput">Dataset ID to Remove:</label>
+                <input type="text" id="removeIdInput" required>
+        
+                <button type="button" onclick="removeDataset()">Remove Dataset</button>
+                <div id="removeResult"></div>
+                <div id="removeError"></div>
+            </form>
+        </div>
+
+        <div id="Query" class="tabcontent">
+            <h2>Perform Query</h2>
+            <form id="queryForm">
+                <label for="queryInput">Query JSON:</label>
+                <textarea id="queryInput" rows="4" required></textarea>
+
+                <button type="button" onclick="performQuery()">Perform Query</button>
+            </form>
+
+            <div id="queryResult"></div>
+            <div id="queryError"></div>
+        </div>
+
+        <div id="List" class="tabcontent">
+            <h2>List Datasets</h2>
+            <button type="button" onclick="listDatasets()">List Datasets</button>
+
+            <div id="listResult"></div>
+            <div id="listError"></div>
+        </div>
+
+          
+    </main>
+</body>
+</html>
